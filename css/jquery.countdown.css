@@ -1,0 +1,105 @@
+.countdownHolder{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.position{
+	display: inline-block;
+	height: 53px;
+	overflow: hidden;
+	position: relative;
+	width: 24px;
+	text-align: center;
+}
+.digit{
+	position:absolute;
+	display:block;
+	max-width: 16px;
+	width: 100%;
+	text-align:center;
+	color: #ffffff;
+	font-family: 'helveticaneuecyrlight';
+    font-size: 42px;
+    line-height: 18px;
+	margin-top: 28px;
+}
+.footer-baner .digit{
+	color: #e60378;
+}
+/* .digit.static{
+} */
+
+/**
+ * You can use these classes to hide parts
+ * of the countdown that you don't need.
+ */
+
+.countDiv0::before,
+.countDiv0::after, 
+.countDiv1::before,
+.countDiv1::after,
+.countDiv2::before,
+.countDiv2::after {
+	display: none;
+}
+.countDays,
+.countHours,
+.countMinutes,
+.countSeconds{
+	display: block;
+	text-align: center;
+	max-width: 91px;
+	width: 100%;
+	height: 91px;
+	background: url(../img/figure3.png) no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.footer-baner .countDays,
+.footer-baner .countHours,
+.footer-baner .countMinutes,
+.footer-baner .countSeconds{
+	background: url(../img/figure4.png) no-repeat;
+	background-position: 50% 50%;
+    background-size: cover;
+}
+.countDays p,
+.countHours p,
+.countMinutes p,
+.countSeconds p{
+	font-family: 'helveticaneuecyrlight';
+    font-size: 16px;
+	color: #ffffff;
+	margin-left: -3px;
+}
+.footer-baner .countDays p,
+.footer-baner .countHours p,
+.footer-baner .countMinutes p,
+.footer-baner .countSeconds p{
+	color: #e60378;
+}
+/* .countDiv{
+	display:inline-block;
+	width:16px;
+	height:1.6em;
+	position:relative;
+}
+.countDiv:before,
+.countDiv:after{
+	position:absolute;
+	width:5px;
+	height:5px;
+	background:#504250;
+	border-radius: 50%;
+	left:50%;
+	margin-left:-3px;
+	top:-45px;
+	box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+	content:'';
+}
+.countDiv:after{
+	top:-25px;
+} */
