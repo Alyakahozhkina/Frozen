@@ -6,22 +6,15 @@ jQuery.noConflict();
 
 
 	jQuery(document).ready(function($) {
-			// $('.header__burger').click(function(){
-			// 	$('.header__burger').toggleClass('open-menu');
-			// 	$('.nav-menu').toggleClass('open-menu');
-			// 	$('.header-box-text').toggleClass('open-menu');
-			// 	$('body').toggleClass('fixed-page');
-			// });
-		
 
-			
-			// BURGER
-		jQuery('.header__burger').click(function(){
-			jQuery('.header').toggleClass('open-menu');
-			jQuery('.header__burger-svg').toggleClass('active');
-			jQuery('.header__menu').toggleClass('open-menu');
-			jQuery('body').toggleClass('fixed-page');
-		});
+		
+			// BURGER JQuery
+		// jQuery('.header__burger').click(function(){
+		// 	jQuery('.header').toggleClass('open-menu');
+		// 	jQuery('.header__burger-svg').toggleClass('active');
+		// 	jQuery('.header__menu').toggleClass('open-menu');
+		// 	jQuery('body').toggleClass('fixed-page');
+		// });
 		
 		// PAGE-SCROLLED
 		let elem = $('.header');
@@ -52,9 +45,6 @@ jQuery.noConflict();
 
 
 
-
-
-			
 		let note = $('#note'),
 			ts = new Date(2021, 08, 27),
 			newYear = true;
@@ -118,22 +108,40 @@ jQuery.noConflict();
 
 
 
+	// BURGER JS
 
+	const headerBurger = document.querySelector('.header__burger');
+	const header = document.querySelector('.header');
+	const headerBurgerSvg = document.querySelector('.header__burger-svg');
+	const headerMenu = document.querySelector('.header__menu');
+	const body = document.querySelector('body');
+
+	headerBurger.addEventListener('click', openMenu);
+
+	function openMenu () {
+		header.classList.toggle('open-menu');
+		headerBurgerSvg.classList.toggle('active');
+		headerMenu.classList.toggle('open-menu');
+		body.classList.toggle('fixed-page');
+		
+	}
+	
 
 	// FORM-VALIDATION JS
-	const forms = document.querySelectorAll('.form');	
-	for(let form of forms) {
-		form.addEventListener('submit', function formSend (e) {
-			e.preventDefault();
-			let error = formValidate(form);
-			
-			// if(error === 0) {
-			// } else {
-			// alert('Заполните все поля!');
-			// }
-		});
+	const forms = document.querySelectorAll('.form');
+	if(forms.length > 0) {	
+		for(let form of forms) {
+			form.addEventListener('submit', function formSend (e) {
+				e.preventDefault();
+				let error = formValidate(form);
+				
+				// if(error === 0) {
+				// } else {
+				// alert('Заполните все поля!');
+				// }
+			});
+		}
 	}
-
 
 	function formValidate (form) {
 		let error = 0;
@@ -171,14 +179,9 @@ jQuery.noConflict();
 	}
 
 	
-
-
-
-
-
 	// MODAL-WINDOW JS
 const modalLinks = document.querySelectorAll('.modal__link');
-const body = document.querySelector('body');
+// const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;

@@ -191,6 +191,7 @@
     }
     .footer-baner .price__text {
         left: 20px;
+        top: 49px;
     }
     /* FOOTER-BANER */
 
@@ -550,8 +551,8 @@
 
 
 
-    .modal-windows .modal-dialog .modal-content .modal-body p,
-    .modal-windows .modal-dialog .modal-content .modal-body li {
+    .modal-windows .modal-content .modal-body p,
+    .modal-windows .modal-content .modal-body li {
 
         font-size: 14px;
     }
@@ -951,7 +952,7 @@
         max-width: 50%;
     }
     .baner__title-text {
-        font-size: 21px;
+        font-size: 23px;
     }
     /* MAIN-BANER */
 
